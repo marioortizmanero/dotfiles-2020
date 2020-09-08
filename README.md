@@ -2,6 +2,8 @@
 
 My dotfiles for Arch Linux.
 
+![screenshot](screenshot.png)
+
 Overall info:
 
 * Terminal: [alacritty](https://github.com/alacritty/alacritty)
