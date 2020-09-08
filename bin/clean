@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# Script for Arch Linux maintenance tasks.
+# Requires `yay` and `paccache`.
+
+log() {
+    printf "\e[36m%s:\e[0m\n" "$1"
+}
+
+num_packages=${1:-10}
+log "Last $num_packages explicitly installed packages"
+while IFS=' ' read -r date _ _ pkg ver; do
+    # Checking if it's still installed and if it was done explicitly
+    if pacman -Qqe "$pkg" &>/dev/null; then
+        echo "$date $pkg $ver"
+        num_packages=$((num_packages - 1))
+    fi
+
+    if [ "$num_packages" -eq 0 ]; then
+        break
+    fi
+done < <(grep 'installed' /var/log/pacman.log | tac)
+
+log "Orphan packages (yay -Rns PKG)"
+yay -Qqtd
+
+log "Cache cleaning (paccache -r)"
+paccache -d --nocolor -v
+
+log "Trash size (trash-empty)"
+du -hs ~/.local/share/Trash
+
+log "Devel updates (yay -Syu --devel)"
+yay -Sua --confirm --devel </dev/null 2>/dev/null \
+    | sed '1,/Checking development packages/d' | grep 'devel/'

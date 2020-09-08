@@ -1,0 +1,4 @@
+~/Programming:1
+~/Downloads:1
+~/Files:2
+~/Games:1

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Python
+Comment=Quick Python Launch
+Exec=python
+Icon=/home/mario/.local/share/applications/icons/python.png
+Terminal=true

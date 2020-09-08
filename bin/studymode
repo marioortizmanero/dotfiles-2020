@@ -1,0 +1,99 @@
+#!/usr/bin/env bash
+# Blocking websites temporarily to reduce procrastination. Funnily
+# enough, this was created while procrastinating.
+
+set -e
+
+# Type the websites you want to block here as an array
+sites=(
+    'discordapp.com'
+    'gateway.discord.gg' 
+    'github.com'
+    'twitter.com'
+    'web.telegram.org'
+    'web.whatsapp.com'
+    'www.amazon.es'
+    'www.ebay.es'
+    'www.instagram.com'
+    'www.phoronix.com'
+    'www.reddit.com'
+    'www.twitch.tv'
+    'www.youtube.com'
+)
+
+TIMESTAMP_FILE="$HOME/.cache/.studymode_timestamp"
+HOSTS_FILE="/etc/hosts"
+BEGIN_COMMENT="### BEGIN STUDYMODE ###"
+END_COMMENT="### END STUDYMODE ###"
+
+usage() {
+    echo "Usage: $0 [--help|--status]"
+}
+
+elapsed_time() {
+    if ! [ -f "$TIMESTAMP_FILE" ]; then
+        echo "Studymode is not activated" >&2
+        exit 1
+    fi
+
+    local last_timestamp cur_timestamp total_secs elapsed_hours elapsed_mins
+    last_timestamp=$(cat "$TIMESTAMP_FILE")
+    cur_timestamp=$(date +%s)
+    total_secs=$((cur_timestamp - last_timestamp))
+    elapsed_hours=$((total_secs / 3600))
+    elapsed_mins=$((total_secs / 60 - elapsed_hours * 60))
+
+    echo "$elapsed_hours hours and $elapsed_mins mins spent studying!"
+}
+
+toggle_hosts() {
+    if [ "$UID" -ne 0 ]; then
+        echo "You must run this script as root to toggle the hosts" >&2
+        exit 1
+    fi
+
+    # Study mode is enabled if the timestamp file exists.
+    if [ -f "$TIMESTAMP_FILE" ]; then
+        local begin_line end_line
+        begin_line="$(grep -n "$BEGIN_COMMENT" "$HOSTS_FILE" | head -n1 | cut -d':' -f1)"
+        end_line="$(grep -n "$END_COMMENT" "$HOSTS_FILE" | head -n1 | cut -d':' -f1)"
+
+        if [ -z "$begin_line" ] || [ -z "$end_line" ]; then
+            echo "Couldn't find hosts in file correctly"
+            exit 1
+        fi
+
+        # Removing the lines and showing for how long the script was activated
+        echo "Turning off Study Mode..." 
+        sed -i -e "$begin_line,${end_line}d" "$HOSTS_FILE"
+        elapsed_time
+        rm "$TIMESTAMP_FILE"
+    else
+        echo "Turning on Study Mode..."
+
+        # A backup is done just in case
+        cp "$HOSTS_FILE" "$HOSTS_FILE.bak"
+
+        # Updating the hosts file
+        (
+            echo "$BEGIN_COMMENT"
+            for site in "${sites[@]}"; do
+                echo "127.0.0.1     $site"
+            done
+            echo "$END_COMMENT"
+        ) >> "$HOSTS_FILE"
+
+        # And creating the timestamp file
+        mkdir -p "$(dirname "$TIMESTAMP_FILE")"
+        date +%s > "$TIMESTAMP_FILE"
+    fi
+}
+
+
+if [ "$1" = "--status" ]; then
+    elapsed_time
+elif [ "$1" = "--help" ]; then
+    usage
+else
+    toggle_hosts
+fi

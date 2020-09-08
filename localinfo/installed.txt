@@ -1,0 +1,170 @@
+adapta-gtk-theme
+adwaita-shell-theme (AUR)
+alacritty
+android-tools
+base
+bash-bats
+bash-language-server
+bear (AUR)
+bind
+bspwm
+cargo-edit
+cargo-expand (AUR)
+ccls
+chromium
+cmake
+cmatrix
+cups
+dhcpcd
+discord
+docker
+docker-compose
+dragon-drag-and-drop (AUR)
+dunst
+efibootmgr
+feh
+file-roller
+firefox
+flake8
+flameshot
+font-manager (AUR)
+gdb
+gimp
+git
+glade
+gnuplot
+gobject-introspection
+gparted
+grub
+gthumb
+hplip
+htop
+hugo
+inetutils
+inkscape
+intel-ucode
+less
+lib32-gnutls
+lib32-libgpg-error
+lib32-libldap
+lib32-libpulse
+lib32-sqlite
+lib32-vulkan-icd-loader
+lib32-vulkan-radeon
+libmaxminddb
+libreoffice-fresh
+libva-mesa-driver
+libva-utils
+lightdm
+lightdm-webkit2-greeter
+linux
+linux-firmware
+lolcat
+lutris
+man-db
+man-pages
+megasync (AUR)
+mesa-vdpau
+minted
+mpv
+neofetch
+neovim-git (AUR)
+net-tools
+nnn-git (AUR)
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+ntp
+numlockx
+obs-studio
+openjdk-src
+openssh
+os-prober
+otf-san-francisco-mono (AUR)
+pacman-contrib
+papirus-icon-theme
+pavucontrol
+php
+picom
+piper
+polybar (AUR)
+pulseaudio
+pulseeffects
+python-grip (AUR)
+python-language-server
+python-matplotlib
+python-numpy
+python-pip
+python-pynvim
+python-setuptools-rust (AUR)
+python-wheel
+qbittorrent
+qt5-tools
+qt5-websockets
+redshift
+ripgrep
+rofi-git (AUR)
+rsync
+rust-analyzer
+rustup
+shellcheck-bin (AUR)
+spotify (AUR)
+srb2kart (AUR)
+steam
+swig
+sxhkd
+sysfsutils
+telegram-desktop
+texlive-core
+thunar
+thunar-archive-plugin
+thunar-volman
+tk
+trash-cli
+ttf-font-awesome
+ttf-material-design-icons (AUR)
+ttf-ms-fonts (AUR)
+tumbler
+twine
+unrar
+usbutils
+valgrind
+vi
+vidify-audiosync (AUR)
+vidify (AUR)
+virtualbox
+virtualbox-ext-oracle (AUR)
+virtualbox-host-modules-arch
+vlc
+vscode-css-languageserver-bin (AUR)
+vscode-html-languageserver-bin (AUR)
+vulkan-icd-loader
+vulkan-radeon
+weechat
+wget
+wine-gecko
+wine-mono
+wine-staging
+winetricks
+xdo
+xdotool
+xf86-video-amdgpu
+xf86-video-ati
+xf86-video-vesa
+xorg-server
+xorg-twm
+xorg-util-macros
+xorg-xclock
+xorg-xev
+xorg-xinit
+xorg-xprop
+xorg-xwininfo
+xsel
+yay (AUR)
+youtube-dl-git (AUR)
+yuzu-mainline-git (AUR)
+zathura
+zathura-pdf-mupdf
+zsh
+zsh-pure-prompt (AUR)
+zsh-syntax-highlighting

@@ -1,0 +1,3 @@
+spotify-cache
+.debris
+.Trash-1000

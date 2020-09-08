@@ -1,0 +1,6 @@
+~/.config/ranger/.rangerdir
+~/.config/gtk-3.0/bookmarks
+~/.config/nvim/plugged
+~/.config/nvim/.netrwhist
+~/.config/nvim/plug.vim.old
+~/.config/nvim/autoload/plug.vim.old

@@ -1,0 +1,23 @@
+Last update made on Tue Sep  8 03:32:24 PM CEST 2020.
+170 explicitly installed programs:
+    * 143 native
+    * 27 external (AUR, PKGBUILDs)
+
+mario@glowarch 
+-------------- 
+OS: Arch Linux x86_64 
+Host: MS-7817 1.0 
+Kernel: 5.8.6-arch1-1 
+Uptime: 2 days, 4 hours, 47 mins 
+Packages: 1074 (pacman) 
+Shell: zsh 5.8 
+Resolution: 1920x1080, 1920x1080 
+WM: bspwm 
+Theme: Adapta-Nokto [GTK2/3] 
+Icons: Papirus-Dark [GTK2/3] 
+Terminal: alacritty 
+Terminal Font: "SF Mono" 
+CPU: Intel i5-4460 (4) @ 3.400GHz 
+GPU: AMD ATI Radeon RX 470/480/570/570X/580/580X/590 
+Memory: 3643MiB / 15951MiB 
+

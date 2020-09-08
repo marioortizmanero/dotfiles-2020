@@ -1,0 +1,9 @@
+[user]
+	email = marioortizmanero@gmail.com
+	name = Mario Ortiz Manero
+[sequence]
+	editor = nvim
+[core]
+	editor = nvim
+[pull]
+	rebase = false

@@ -1,0 +1,9 @@
+# Fix for monitor resolution
+xrandr --output DVI-D-0 --mode 1920x1080 --rate 60 --brightness 1.1 --right-of HDMI-A-0 --mode 1920x1080 --rate 75
+
+# Fix for keyboard layout
+setxkbmap es
+
+# Disables DPMS and prevents screen from blanking on standby
+xset s off -dpms
+

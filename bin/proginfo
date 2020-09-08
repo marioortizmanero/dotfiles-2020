@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Showing more information about a program from different sources.
+
+log() {
+    printf "\e[36m%s:\e[39m\n" "$1"
+}
+
+if [ -z "$1" ]; then
+    echo "Error: No program provided" >&2
+    exit 1
+fi
+
+log "whatis"
+whatis "$@"
+log "whereis"
+whereis "$@"
+log "yay -Qi"
+yay -Qi "$@"
