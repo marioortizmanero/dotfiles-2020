@@ -4,6 +4,10 @@ My dotfiles for Arch Linux.
 
 ![screenshot](screenshot.png)
 
+[← 2019 dotfiles](https://github.com/marioortizmanero/dotfiles-2019)
+
+## System information
+
 Overall info:
 
 * Terminal: [alacritty](https://github.com/alacritty/alacritty)
@@ -15,6 +19,11 @@ Overall info:
 * Color theme: [onedark](https://github.com/joshdick/onedark.vim)
 * Window manager: [bspwm](https://github.com/baskerville/bspwm)
 * Display manager: [lightdm](https://wiki.archlinux.org/index.php/LightDM)
+* [Wallpaper](https://www.youtube.com/watch?v=9CAz_vvsK9M):
+
+![wallpaper](./wallpaper.png)
+
+## File management
 
 This repository contains the following directories:
 
@@ -28,6 +37,8 @@ original system.
 * `localinfo`: information about the system, like installed packages,
 directory trees, system specs, and the script outputs from
 `dotsmanager/scripts/*`.
+
+## Usage
 
 I have a ridiculously over-engineered script named `dotsmanager.bash` to
 manage my dotfiles between multiple computers, for the sake of learning
