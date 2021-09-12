@@ -4,7 +4,8 @@ My dotfiles for Arch Linux.
 
 ![screenshot](screenshot.png)
 
-[← 2019 dotfiles](https://github.com/marioortizmanero/dotfiles-2019)
+[← 2019 dotfiles](https://github.com/marioortizmanero/dotfiles-2019) |
+[→ 2021 dotfiles](https://github.com/marioortizmanero/dotfiles-2021)
 
 ## System information
 
@@ -50,6 +51,6 @@ using some tool like [stow
 [very useful article about this
 ](https://wiki.archlinux.org/index.php/Dotfiles).
 
-If you are importing my dotfiles, do a `grep -r '[REMOVED]'`, which are parts
+If you are importing my dotfiles, do a `grep -r '\[REMOVED\]'`, which are parts
 that have been manually removed for privacy reasons. Just replace these with
 whatever you need.
